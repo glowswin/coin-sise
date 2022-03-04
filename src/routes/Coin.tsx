@@ -186,7 +186,7 @@ function Coin() {
             </OverviewItem>
             <OverviewItem>
               <span>심볼:</span>
-              <span>${infoData?.symbol}</span>
+              <span>{infoData?.symbol}</span>
             </OverviewItem>
             <OverviewItem>
               <span>가격:</span>
