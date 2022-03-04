@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/coin-sise/static/js/main.5b8346cf.js",
+    "main.js": "/coin-sise/static/js/main.1f0718cf.js",
     "index.html": "/coin-sise/index.html",
-    "main.5b8346cf.js.map": "/coin-sise/static/js/main.5b8346cf.js.map"
+    "main.1f0718cf.js.map": "/coin-sise/static/js/main.1f0718cf.js.map"
   },
   "entrypoints": [
-    "static/js/main.5b8346cf.js"
+    "static/js/main.1f0718cf.js"
   ]
 }
