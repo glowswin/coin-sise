@@ -1,6 +1,10 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
 import Router from "./Router";
+import { darkTheme, lightTheme } from "./theme";
+import { ThemeProvider } from "styled-components";
+import { useRecoilValue } from "recoil";
+import { isDarkAtom } from "./atom";
 const GrobalStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -28,6 +32,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
 	line-height: 1;
   background-color: ${(props) => props.theme.bgColor};
   color:${(props) => props.theme.txtColor};
@@ -43,16 +49,23 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
+a{
+	text-decoration: none;
+	color:inherit;
+}
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 `;
 function App() {
+  const isDark = useRecoilValue(isDarkAtom);
   return (
     <>
-      <GrobalStyle />
-      <Router />
+      <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
+        <GrobalStyle />
+        <Router />
+      </ThemeProvider>
     </>
   );
 }
